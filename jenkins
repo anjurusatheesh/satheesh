@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Creat a file') {
+        stage('Creat a file') { 
             steps {
                 sh 'cd ~/ && touch satheesh.txt'    
             }
