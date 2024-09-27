@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Creat a file') { 
+        stage('Create a File') { 
             steps {
-                sh 'cd ~/ && touch satheesh.txt'    
+                // Create a file directly in the home directory
+                sh 'touch ~/satheesh.txt'
             }
         }
         stage('Hello') {
