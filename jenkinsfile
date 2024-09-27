@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone Repository') {
             steps {
-                sh 'cd - && git clone -b main https://github.com/anjurusatheesh/satheesh.git'
+                sh 'cd - && git clone -b main 'https://github.com/anjurusatheesh/satheesh.git'
             }
         }
         stage('Hello') {
