@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                dir('~') {  // change to the home directory
+                    git url: 'https://github.com/anjurusatheesh/satheesh.git', branch: 'main'
+                }    
+            }
+        }
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
