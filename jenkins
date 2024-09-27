@@ -2,11 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repository') {
+        stage('Creat a file') {
             steps {
-                dir('~') {  // change to the home directory
-                    git url: 'https://github.com/anjurusatheesh/satheesh.git', branch: 'main'
-                }    
+                sh 'cd ~/ && touch satheesh.txt'    
             }
         }
         stage('Hello') {
