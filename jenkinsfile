@@ -2,12 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Docker install') {
+        stage('clone Repository') {
             steps {
-                sh '''
-                sudo apt-get update
-                sudo apt-get install docker.io -y
-                '''
+                sh 'cd - && git clone -b main https://github.com/anjurusatheesh/satheesh.git'
             }
         }
         stage('Hello') {
